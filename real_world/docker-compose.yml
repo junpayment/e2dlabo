@@ -1,0 +1,11 @@
+version: "3"
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "real_world"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
