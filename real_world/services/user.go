@@ -17,6 +17,12 @@ type UserService struct {
 
 var id = "hoge"
 
+func NewUserService(d DB) (*UserService, error) {
+	return &UserService{
+		DB: d,
+	}, nil
+}
+
 func (u *UserService) Me() (*models.User, error) {
 	user, err := u.DB.GetUserByID(id)
 	if err != nil {

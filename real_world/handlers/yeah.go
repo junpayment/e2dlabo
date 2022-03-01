@@ -18,6 +18,12 @@ type Yeah struct {
 	UserService UserService
 }
 
+func NewYeah(u UserService) (*Yeah, error) {
+	return &Yeah{
+		UserService: u,
+	}, nil
+}
+
 func (y *Yeah) Me(c *gin.Context) {
 	user, err := y.UserService.Me()
 	if err != nil {
