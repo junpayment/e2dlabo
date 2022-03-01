@@ -1,7 +1,7 @@
 package main
 
 import (
-	"e2dlabo/real_world/wire/wire"
+	"e2dlabo/real_world/wire/web/wire"
 	"log"
 
 	"github.com/gin-gonic/gin"
